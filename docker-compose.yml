@@ -1,0 +1,14 @@
+version: "3"
+services:
+  go:
+    image: golang
+    volumes:
+      - .:/usr/src/myapp
+    networks:
+      - golang
+    stdin_open: true
+    tty: true
+    command: bash
+
+networks:
+  golang:
